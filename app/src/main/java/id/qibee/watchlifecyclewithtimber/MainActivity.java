@@ -44,6 +44,23 @@ public class MainActivity extends AppCompatActivity {
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Timber.d("Activity start");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Timber.d("Activity Stopped");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Timber.d("Activity Resume");
+    }
 
     @Override
     protected void onDestroy() {
