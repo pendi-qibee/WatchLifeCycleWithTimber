@@ -44,4 +44,10 @@ public class MainActivity extends AppCompatActivity {
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
 
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Timber.w("I'm destroyed");
+    }
 }
